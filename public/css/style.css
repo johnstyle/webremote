@@ -1,0 +1,23 @@
+.step {
+    display:none
+}
+
+#home {
+    display:block
+}
+#home .qrcode {
+    margin:50px auto;
+    width:256px;
+    height:256px
+}
+#home h1 {
+    font-size:50px;
+    color:#bbb;
+    text-align:center;
+    font-weight:normal;
+}
+#home p {
+    text-align:center;
+    font-size:16px;
+    color:#666;
+}
