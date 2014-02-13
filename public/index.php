@@ -3,7 +3,7 @@
 use Webremote\Core\Remote;
 use Webremote\Core\Website;
 
-define('BASEHREF', 'http://www.webremote.dev/example.php');
+define('BASEHREF', 'http://johnstyle.github.io/webremote/public/');
 
 include '../src/johnstyle/webremote/bootstrap.php';
 
