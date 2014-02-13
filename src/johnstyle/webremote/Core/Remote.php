@@ -4,25 +4,22 @@ namespace Webremote\Core;
 
 class Remote
 {
-    private $token;
     private $is;
+    private static $token;
 
     public function __construct()
     {
         if(isset($_GET['token']) && !empty($_GET['token'])) {
-            $this->token = $_GET['token'];
-            session_id($this->token);
-            session_start();
             setcookie('is', 'remote');
-            $this->setEvent('start');
+            self::setToken($_GET['token']);
+            Website::setEvent('start');
         } else {
             if(isset($_COOKIE['is'])) {
                 $this->is = $_COOKIE['is'];
             } else {
                 setcookie('is', 'website');
             }
-            session_start();
-            $this->token = session_id();
+            self::setToken();
         }
     }
 
@@ -36,22 +33,24 @@ class Remote
         return $this->is == 'website';
     }
 
-    public function getToken()
+    public static function setToken($token = null)
     {
-        return $this->token;
-    }
-
-    public function setEvent($event)
-    {
-        file_put_contents('../sessions/' . $this->token . '.txt', $event);
-        header('Location:' . BASEHREF);
-        exit;
-    }
-
-    public function listenEvent()
-    {
-        if(isset($_GET['event']) && !empty($_GET['event'])) {
-            $this->setEvent($_GET['event']);
+        if($token) {
+            session_id($token);
+            self::$token = $token;
         }
+
+        session_start();
+
+        if(!$token) {
+            self::$token = session_id();
+        }
+
+        session_write_close();
+    }
+
+    public static function getToken()
+    {
+        return self::$token;
     }
 }

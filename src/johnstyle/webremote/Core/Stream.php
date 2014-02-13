@@ -10,18 +10,14 @@ class Stream
         header('Cache-Control: no-cache');
     }
 
-    public function listen($file)
+    public function listen()
     {
-        $lastModified = null;
         while (1) {
-            $time = filemtime($file);
-            if ($lastModified != $time) {
-                $lastModified = $time;
-                echo 'data: ' . file_get_contents($file) . "\n\n";
-            }
+            echo 'event: ping' ."\n";
+            echo 'data: ' . Website::getEvent() . "\n\n";
             ob_flush();
             flush();
-            sleep(1);
+            usleep(100000);
         }
     }
 }

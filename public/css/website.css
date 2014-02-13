@@ -1,0 +1,185 @@
+/**
+ * Reset
+ * *****************************************
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/**
+ * Common
+ * *****************************************
+ */
+.container {
+    padding:20px;
+    width:980px;
+    margin:0 auto
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {display: block}
+html[xmlns] .clearfix {display: block}
+* html .clearfix {height: 1%}
+
+/**
+ * Header
+ * *****************************************
+ */
+#header{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index:9999;
+    background: rgba(0, 0, 0, 0.3);
+    border-top:4px solid rgba(0, 0, 0, 0.4);
+    -webkit-transition:all .4s ease-in-out;
+    -moz-transition:all .4s ease-in-out;
+    -o-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out
+}
+
+#header .container {
+    padding:0
+}
+
+#header h1{
+    float:left;
+    margin-top:12px;
+}
+#header h1 a{
+    font-family:"Open Sans","Helvetica",Helvetica,Arial,sans-serif;
+    font-size:30px;
+    text-rendering: optimizelegibility;
+    text-decoration:none;
+    font-style: normal;
+    font-weight: bold;
+    color:#fff
+}
+#header h1 a span{
+    font-weight: normal
+}
+
+#header nav{
+    display:table;
+    float:right
+}
+#header nav li{
+    float:left;
+    border-top:4px solid rgba(0, 0, 0, 0.5);
+    position:relative;
+    top:-4px;
+    -webkit-transition:all .4s ease-in-out;
+    -moz-transition:all .4s ease-in-out;
+    -o-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out;
+}
+#header nav li a{
+    display:block;
+    padding:20px 15px 16px;
+    color:rgba(255, 255, 255, 0.7);
+    text-decoration:none
+}
+#header nav li.active,
+#header nav li:hover{
+    border-top:4px solid rgba(255, 255, 255, 0.8)!important;
+}
+#header nav li.active a,
+#header nav li:hover a{
+    color:#fff
+}
+
+
+/**
+ * Page
+ * *****************************************
+ */
+.page .container{
+    padding-top:150px;
+    line-height:1.5;
+    color:#fff
+}
+.page .container h2{
+    margin-bottom:30px;
+    text-align:center;
+    font-size:25px
+}
+
+
+/**
+ * Home
+ * *****************************************
+ */
+#home .container{
+    color:#333
+}
+#home .qrcode {
+    margin:50px auto;
+    width:256px;
+    height:256px
+}
+#home h2 {
+    font-size:50px;
+    text-align:center;
+    font-weight:normal;
+}
+#home p {
+    text-align:center;
+    font-size:16px
+}
+
+#start {
+    background:#34495E
+}
