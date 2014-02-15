@@ -3,6 +3,7 @@
 use Webremote\Core\Remote;
 use Webremote\Core\Website;
 
+include '../config.php';
 include '../src/johnstyle/webremote/bootstrap.php';
 
 $remote = new Remote();
