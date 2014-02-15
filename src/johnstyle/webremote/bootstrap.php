@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('BASEHREF')) {
-    define('BASEHREF', './');
+    define('BASEHREF', '/');
 }
 
 spl_autoload_register(
