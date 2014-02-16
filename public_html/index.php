@@ -3,7 +3,10 @@
 use Webremote\Core\Remote;
 use Webremote\Core\Website;
 
-include '../config.php';
+define('ROOT', realpath(__DIR__) . '/..');
+
+/** Settings */
+include ROOT . '/settings.php';
 include '../src/johnstyle/webremote/bootstrap.php';
 
 $remote = new Remote();
@@ -19,7 +22,7 @@ Website::listenEvent();
     <?php else: ?>
         <link href="css/website.css" rel="stylesheet" type="text/css">
     <?php endif; ?>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 
@@ -65,8 +68,8 @@ Website::listenEvent();
     <?php if($remote->isRemote()): ?>
         <script type="text/javascript" src="js/remote.js"></script>
     <?php else: ?>
-        <script type="text/javascript" src="https://raw.github.com/jeromeetienne/jquery-qrcode/master/src/qrcode.js"></script>
-        <script type="text/javascript" src="https://raw.github.com/jeromeetienne/jquery-qrcode/master/src/jquery.qrcode.js"></script>
+        <script type="text/javascript" src="bower_components/jquery.qrcode/src/qrcode.js"></script>
+        <script type="text/javascript" src="bower_components/jquery.qrcode/src/jquery.qrcode.js"></script>
         <script type="text/javascript" src="js/website.js"></script>
     <?php endif; ?>
 </body>
