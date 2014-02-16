@@ -1,0 +1,20 @@
+{
+  "name": "johnstyle/webremote",
+  "main": "css/style.css",
+  "dependencies": {
+    "jquery.qrcode" : "0.7.0",
+    "jquery": "1.11.0"
+  },
+  "version": "1.0.0",
+  "authors": [
+    "Jonathan SAHM <contact@johnstyle.fr>"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
