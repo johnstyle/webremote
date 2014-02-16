@@ -1,2 +1,5 @@
 log/
-config.php
+public_html/bower_components/
+vendor/
+composer.lock
+settings.php
