@@ -82,7 +82,7 @@
     text-align:center;
     font-weight:normal;
     color:#fff;
-    margin-bottom:30px;
+    margin-bottom:100px;
 }
 .page .container p {
     font-size:20px;
@@ -108,7 +108,7 @@
     background:#706150;
 }
 #home .qrcode {
-    margin:100px auto;
+    margin:50px auto;
     width:256px;
     height:256px
 }
@@ -142,7 +142,7 @@
     background:#A43304
 }
 #forkme .container .author {
-    margin-top:150px;
+    margin-top:100px;
     background:rgba(255,255,255,0.05);
     padding:10px;
     border:1px solid rgba(255,255,255,0.1);
