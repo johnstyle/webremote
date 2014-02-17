@@ -87,7 +87,7 @@ Website::listenEvent(array(
             <div class="container">
                 <h2>Bienvenue !</h2>
                 <p>Vous naviguez à présent sur le site avec votre smartphone.</p>
-                <p>L'exemple que vous verrez ici se contente d'intéractions basiques mais les possibilitées sont infines !</p>
+                <p>L'exemple que vous verrez ici se contente d'intéractions basiques mais les possibilitées sont infinies !</p>
             </div>
         </section>
         <section id="info" class="page">
