@@ -12,7 +12,7 @@ class Remote
         if(isset($_GET['token']) && !empty($_GET['token'])) {
             setcookie('is', 'remote');
             self::setToken($_GET['token']);
-            Website::setEvent('start');
+            Website::setEvent('intro');
         } else {
             if(isset($_COOKIE['is'])) {
                 $this->is = $_COOKIE['is'];
