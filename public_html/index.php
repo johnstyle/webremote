@@ -15,9 +15,13 @@ Website::listenEvent(array(
     'home', 'intro', 'info', 'forkme'
 ));
 
-?><!doctype html>
-<html>
+?><!DOCTYPE html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebRemote</title>
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <?php if($remote->isRemote()): ?>
