@@ -24,7 +24,7 @@ class Website
         self::$curentEvent = null;
 
         session_start();
-        self::$curentEvent = $_SESSION['event'];
+        self::$curentEvent = isset($_SESSION['event']) ? $_SESSION['event'] : null;
         session_write_close();
 
         return self::$curentEvent;
