@@ -24,14 +24,14 @@ jQuery(function ($) {
         $(this).css('height', $(window).height());
     });
 
+    $(window).resize(function () {
+        $('.page:visible').css('height', $(window).height());
+    });
+
     $('#header a').on('click', function() {
         scrollTo(this);
         return false;
     });
-
-//    $(window).resize(function () {
-//        scrollTo(this);
-//    });
 
     if (!!window.EventSource) {
         var action;
