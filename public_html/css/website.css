@@ -1,79 +1,4 @@
 /**
- * Reset
- * *****************************************
- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-:focus {
-    outline: 0;
-}
-
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-/**
- * Common
- * *****************************************
- */
-.container {
-    padding:20px;
-    width:980px;
-    margin:0 auto
-}
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-.clearfix {display: block}
-html[xmlns] .clearfix {display: block}
-* html .clearfix {height: 1%}
-
-/**
  * Header
  * *****************************************
  */
@@ -98,6 +23,7 @@ html[xmlns] .clearfix {display: block}
 #header h1{
     float:left;
     margin-top:12px;
+    margin-bottom:15px
 }
 #header h1 a{
     font-family:"Open Sans","Helvetica",Helvetica,Arial,sans-serif;
@@ -149,12 +75,28 @@ html[xmlns] .clearfix {display: block}
 .page .container{
     padding-top:150px;
     line-height:1.5;
-    color:#fff
+    color:rgba(255,255,255,0.75)
 }
 .page .container h2{
-    margin-bottom:30px;
+    font-size:50px;
     text-align:center;
-    font-size:25px
+    font-weight:normal;
+    color:#fff;
+    margin-bottom:30px;
+}
+.page .container p {
+    font-size:20px;
+    margin-bottom:20px
+}
+.page .container strong {
+    font-weight:normal;
+    color:#fff
+}
+.page .container a {
+    color:rgba(255,255,255,0.75)
+}
+.page .container a:hover {
+    color:#fff
 }
 
 
@@ -162,24 +104,68 @@ html[xmlns] .clearfix {display: block}
  * Home
  * *****************************************
  */
-#home .container{
-    color:#333
+#home{
+    background:#706150;
 }
 #home .qrcode {
-    margin:50px auto;
+    margin:100px auto;
     width:256px;
     height:256px
 }
-#home h2 {
-    font-size:50px;
-    text-align:center;
-    font-weight:normal;
-}
-#home p {
-    text-align:center;
-    font-size:16px
+#home .container p {
+    text-align:center
 }
 
-#start {
+/**
+ * Intro
+ * *****************************************
+ */
+#intro {
     background:#34495E
+}
+
+
+/**
+ * Info
+ * *****************************************
+ */
+#info {
+    background:#405626
+}
+
+
+/**
+ * Fork
+ * *****************************************
+ */
+#forkme {
+    background:#A43304
+}
+#forkme .container .author {
+    margin-top:150px;
+    background:rgba(255,255,255,0.05);
+    padding:10px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+#forkme .container .author p {
+    margin:20px 0;
+    padding:0
+}
+#forkme .container .author img {
+    float:left;
+    margin-right:30px;
+    box-shadow:0 0 5px #333;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    #header h1 {
+        float:none;
+        text-align:center
+    }
+    #header nav {
+        float:none;
+        margin:0 auto
+    }
 }

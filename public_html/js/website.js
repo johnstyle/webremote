@@ -1,12 +1,11 @@
 
 function scrollTo(e)
 {
-    $this = jQuery(e);
-
-    $this.closest('nav').find('li').removeClass('active');
-    $this.closest('li').addClass('active');
+    var menu = jQuery('#header nav').find('a[href=' + jQuery(e).attr('href') + ']');
+    jQuery(menu).closest('nav').find('li').removeClass('active');
+    jQuery(menu).closest('li').addClass('active');
     jQuery('html, body').animate({
-        scrollTop: jQuery($this.attr('href')).offset().top
+        scrollTop: jQuery(jQuery(menu).attr('href')).offset().top
     }, 'slow', 'linear');
 }
 
@@ -16,7 +15,8 @@ jQuery(function ($) {
         $(this).qrcode({
             text : $(this).data('url'),
             background : 'transparent',
-            foreground : '#333'
+            fill : '#382E25',
+            size:256
         });
     });
 
@@ -24,16 +24,20 @@ jQuery(function ($) {
         $(this).css('height', $(window).height());
     });
 
-    $('#header nav a').on('click', function() {
+    $('#header a').on('click', function() {
         scrollTo(this);
         return false;
     });
+
+//    $(window).resize(function () {
+//        scrollTo(this);
+//    });
 
     if (!!window.EventSource) {
         var action;
         var source = new EventSource('stream.php');
         source.addEventListener('ping', function(e) {
-            if (action != e.data) {
+            if (e.data && action != e.data) {
                 action = e.data;
                 scrollTo(jQuery('a[href="#' + action + '"]'));
             }

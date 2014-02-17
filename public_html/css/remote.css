@@ -1,0 +1,107 @@
+/**
+ * Common
+ * *****************************************
+ */
+body {
+    background:#eee
+}
+.container {
+    width:80%
+}
+
+/**
+ * Header
+ * *****************************************
+ */
+#header h1 {
+    color:#333;
+    font-family:"Open Sans","Helvetica",Helvetica,Arial,sans-serif;
+    font-size:50px;
+    text-rendering: optimizelegibility;
+    text-decoration:none;
+    font-style: normal;
+    font-weight: bold;
+    text-align:center
+}
+#header h1 span{
+    font-weight: normal
+}
+
+
+/**
+ * Remote
+ * *****************************************
+ */
+
+#remote nav ul {
+    position:relative;
+    width:424px;
+    margin:0 auto;
+}
+
+#remote nav span,
+#remote nav a {
+    display:block;
+    width:128px;
+    height:128px;
+    text-decoration:none;
+    margin:0 auto;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#remote nav span {
+    opacity:0.2;
+    filter:alpha(opacity=20)
+}
+
+#remote nav span.up,
+#remote nav a.up {
+    background-image:url('../images/up.png');
+    margin-bottom:128px;
+}
+
+#remote nav span.down,
+#remote nav a.down {
+    background-image:url('../images/down.png')
+}
+
+#remote nav span.home,
+#remote nav a.home {
+    background-image:url('../images/home.png');
+    left:0
+}
+
+#remote nav span.info,
+#remote nav a.info {
+    background-image:url('../images/info.png');
+    right:0
+}
+
+#remote nav a.home,
+#remote nav a.info {
+    position:absolute;
+    top:128px
+}
+
+@media screen and (max-width: 640px) {
+    #remote nav ul {
+        width:232px
+    }
+    #remote nav span,
+    #remote nav a {
+        width:64px;
+        height:64px
+    }
+    #remote nav span.up,
+    #remote nav a.up {
+        margin-bottom:64px
+    }
+    #remote nav span.home,
+    #remote nav span.info,
+    #remote nav a.home,
+    #remote nav a.info {
+        top:64px
+    }
+}
